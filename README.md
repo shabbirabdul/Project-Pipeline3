@@ -70,7 +70,7 @@ node1 ansible_ssh_host=52.5.189.34 ansible_ssh_user=ubuntu ansible_ssh_private_k
 
 #Deployment of Binaries and Remote Deployment
 
-The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifcats are pushed to remote AWS EC-2 instances.
+The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. Afetr the build is complete, the generated artifcats are pushed to remote AWS EC-2 instances.
 
 We have configured 2 jenkins jobs one for Production deploy which deploys on all servers and one for Canary release which deploys artifacts on subset of servers.
 
