@@ -2,7 +2,7 @@
 
 ###Automatic deployment environment configuration: 
 
-A playbook is created to provision infrastructure necessary to run the application. The Application used here is a JAVA  web application build using MAVEN. 
+A playbook is created to provision infrastructure necessary to run the application. 
 
 ###Playbook Command:
 
@@ -54,5 +54,29 @@ ansible-playbook -i inventory playbook.yml
       sudo: yes
  
 ```
+###Inventory File
+
+```
+[web]
+node0 ansible_ssh_host=ec2-52-5-254-8.compute-1.amazonaws.com ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/Downloads/ckan-local.pem
+
+[client]
+node1 ansible_ssh_host=52.5.189.34 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/Downloads/ckan-local.pem
+```
+
+### Ansible Running
+
+//M3P1
+
+#Deployment of Binaries and Remote Deployment
+
+The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifcats are pushed to remote AWS EC-2 instances.
+
+We have configured 2 jenkins jobs one for Production deploy which deploys on all servers and one for Canary release which deploys artifacts on subset of servers.
+
+
+### Jenkins jobs
+
+
 
 
