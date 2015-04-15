@@ -96,11 +96,13 @@ A post build step has been configured to deploy the artifacts generated after bu
 
 # Monitor the application for Alerts/Failures
 
+A Jenkins Site Monitoring plugin is installed to get the status of application. The plugin checks if the site is up for every 2 seconds. 
 
+part 5 image
 
+The Jenkins job configured also gives the status of a successful build. 
 
-
-
+Jenkins Success Image
 
 
 
