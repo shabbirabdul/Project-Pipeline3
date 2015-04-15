@@ -77,6 +77,37 @@ We have configured 2 jenkins jobs one for Production deploy which deploys on all
 
 ### Jenkins jobs
 
+1. Production Deployment
+2. Canary Deployment
+
+Jenkins jpg.
+
+### Deployment Configuration:
+
+A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever.
+
+#### Production Deploy Job
+..production deplou config image and 
+..production deploy success image
+
+#### Canary Deploy Job
+
+.. canary deploy config image and canary deploy success image
+
+# Monitor the application for Alerts/Failures
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
