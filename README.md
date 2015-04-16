@@ -4,11 +4,11 @@
 
 A playbook is created to provision infrastructure necessary to run the application. 
 
-####1. Playbook Command
+##### Playbook Command
 
 `ansible-playbook -i inventory playbook.yml`
 
-####2. Hosts File
+##### Hosts File
 
 ```
 [web]
@@ -17,7 +17,7 @@ A playbook is created to provision infrastructure necessary to run the applicati
 52.4.175.99 
 ```
 
-####3. Playbook File
+##### Playbook File
 ```
 ---
 - hosts: web
@@ -52,7 +52,7 @@ A playbook is created to provision infrastructure necessary to run the applicati
       sudo: yes
  
 ```
-####4. Inventory File
+##### Inventory File
 
 ```
 [web]
@@ -62,36 +62,36 @@ node0 ansible_ssh_host=ec2-52-5-254-8.compute-1.amazonaws.com ansible_ssh_user=u
 node1 ansible_ssh_host=52.5.189.34 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/Downloads/ckan-local.pem
 ```
 
-####5. Ansible Running
+##### Ansible Running
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0764/63a27456-e3a6-11e4-8465-867c2269f6dc.png)
 
 ###Deployment of Binaries and Remote Deployment
 
-The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. Afetr the build is complete, the generated artifacts are pushed to remote AWS EC-2 instances.
+The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifacts are pushed to remote AWS EC-2 instances.
 
 We have configured 2 jenkins jobs one for Production deploy which deploys on all servers and one for Canary release which deploys artifacts on subset of servers.
 
-####1. Jenkins jobs
+##### Jenkins jobs
 
 1. Production Deployment
 2. Canary Deployment
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0766/63b272f2-e3a6-11e4-8ed0-123410d4ede0.png)
 
-####2. Deployment Configuration:
+##### Deployment Configuration:
 
 A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever.
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
 
-####3. Production Deploy Job
+##### Production Deploy Job
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0765/63ace5f8-e3a6-11e4-997b-20e73280f594.png)
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
-####3. Canary Deploy Job
+##### Canary Deploy Job
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0762/6399aaa6-e3a6-11e4-9433-b36b074d6d91.png)
 
