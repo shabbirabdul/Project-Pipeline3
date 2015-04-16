@@ -96,12 +96,17 @@ The below configurations are done for deployment post build on production EC-2 i
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0765/63ace5f8-e3a6-11e4-997b-20e73280f594.png)
 
+Success message as seen after successful deployemnt on production servers.
+
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
 ##### Canary Deploy Job
 The below configurations are done for deployment post build on Canary instances EC-2 instances.
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0762/6399aaa6-e3a6-11e4-9433-b36b074d6d91.png)
+
+Success message as seen after successful deployemnt on canary server.
+
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0763/639c1be2-e3a6-11e4-9ab3-b80cb77e7901.png)
 
