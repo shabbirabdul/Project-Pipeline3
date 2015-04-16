@@ -72,7 +72,7 @@ The application used here is a JAVA web application built using MAVEN, Jenkins j
 
 ##### Deployment Configuration
 
-A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever. The application is automatically undeployed and deployed using by creating a manager user in Tomcat. 
+A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever. A 'Manager' user is created on tomcat server to facilitate deployment. Remote deployments can be done on tomcat by adding the following lines of code in tomcat-users.xml
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
 
