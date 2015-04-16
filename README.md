@@ -68,9 +68,9 @@ node1 ansible_ssh_host=52.5.189.34 ansible_ssh_user=ubuntu ansible_ssh_private_k
 
 ###Deployment of Binaries and Remote Deployment
 
-The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifacts are pushed to remote AWS EC-2 instances.
+The application used here is a JAVA web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifacts are pushed to remote AWS EC-2 instances.
 
-##### Deployment Configuration:
+##### Deployment Configuration
 
 A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever. The application is automatically undeployed and deployed using by creating a manager user in Tomcat. 
 
@@ -93,12 +93,14 @@ Both these branches have a respective Jenkins Hook connected to them that trigge
 ##### Production Deploy Job
 
 The below configurations are done for deployment post build on production EC-2 instances.
+
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0765/63ace5f8-e3a6-11e4-997b-20e73280f594.png)
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
 ##### Canary Deploy Job
 The below configurations are done for deployment post build on Canary instances EC-2 instances.
+
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0762/6399aaa6-e3a6-11e4-9433-b36b074d6d91.png)
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0763/639c1be2-e3a6-11e4-9ab3-b80cb77e7901.png)
@@ -113,7 +115,7 @@ Monitoring application can be done using several approaches.
 2. The Jenkins job configured also gives the status of a successful build.
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
-3. We can also extend our Monitoring workshop to check if the application is breaching memory contraints. To explain this we have deployed same web application on two different servers, when the memory limit exceeds 85% the proxy server will toggle between servers. 
+3. We can also extend our Monitoring workshop to check if the application is breaching memory contraints. To explain this we have deployed the same web application on two different servers, when the memory limit exceeds 85% the proxy server will toggle between servers. 
 
 ```
 var io = require('socket.io').listen(server);
