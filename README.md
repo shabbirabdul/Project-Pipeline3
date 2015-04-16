@@ -107,8 +107,20 @@ The Jenkins job configured also gives the status of a successful build.
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
+We can also extend our Monitoring workshop to check if the application is breaching memory contraints. To explain this we have deployed same web application on two different servers, when the memory limit exceeds 85% the proxy server will toggle between servers. 
 
+```
+var io = require('socket.io').listen(server);
+io.sockets.on('connection', function (socket) {
 
+      socket.on('heartbeat',function(data){
+            if(data.memory > 0.85 )
+              {
+                servers = [BACKUP]
+              }
+      });
+
+```
 
 
 
