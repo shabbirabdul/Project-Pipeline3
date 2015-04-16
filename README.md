@@ -70,6 +70,14 @@ node1 ansible_ssh_host=52.5.189.34 ansible_ssh_user=ubuntu ansible_ssh_private_k
 
 The Application used here is a JAVA  web application built using MAVEN, Jenkins job is configured to run this MAVEN project. After the build is complete, the generated artifacts are pushed to remote AWS EC-2 instances.
 
+##### Deployment Configuration:
+
+A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever. The application is automatically undeployed and deployed using by creating a manager user in Tomcat. 
+
+![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
+
+### Canary Release
+
 We have configured 2 jenkins jobs one for Production deploy which deploys on all servers and one for Canary release which deploys artifacts on subset of servers.
 
 ##### Jenkins jobs
@@ -79,20 +87,18 @@ We have configured 2 jenkins jobs one for Production deploy which deploys on all
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0766/63b272f2-e3a6-11e4-8ed0-123410d4ede0.png)
 
-##### Deployment Configuration:
-
-A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever.
-
-![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
+Similarly, we have two branches in our git repository, developer and production branch.
+Both these branches have a respective Jenkins Hook connected to them that triggers Canary Release and Production release jobs in Jenkins.
 
 ##### Production Deploy Job
 
+The below configurations are done for deployment post build on production EC-2 instances.
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0765/63ace5f8-e3a6-11e4-997b-20e73280f594.png)
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
 ##### Canary Deploy Job
-
+The below configurations are done for deployment post build on Canary instances EC-2 instances.
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0762/6399aaa6-e3a6-11e4-9433-b36b074d6d91.png)
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0763/639c1be2-e3a6-11e4-9ab3-b80cb77e7901.png)
