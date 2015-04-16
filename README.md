@@ -108,8 +108,7 @@ The below configurations are done for deployment post build on Canary instances 
 Monitoring application can be done using several approaches.
 
 1. A Jenkins Site Monitoring plugin is installed to get the status of application. The plugin checks if the site is up for every 2 seconds.
-
-![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0770/3e965e32-e3a8-11e4-803e-2785bb2af38c.png)
+2. ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0770/3e965e32-e3a8-11e4-803e-2785bb2af38c.png)
 
 2. The Jenkins job configured also gives the status of a successful build.
 
