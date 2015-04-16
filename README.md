@@ -83,6 +83,8 @@ We have configured 2 jenkins jobs one for Production deploy which deploys on all
 
 A post build step has been configured to deploy the artifacts generated after build step. The post build step undeploys and redeploys the application on Tomcat sever.
 
+![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
+
 ####3. Production Deploy Job
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0765/63ace5f8-e3a6-11e4-997b-20e73280f594.png)
@@ -105,8 +107,8 @@ The Jenkins job configured also gives the status of a successful build.
 
 Jenkins Success Image
 
-M3p3 
-![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0769/63c11a14-e3a6-11e4-9993-f360ed5067aa.png)
+
+
 
 
 
