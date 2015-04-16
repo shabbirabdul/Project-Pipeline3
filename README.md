@@ -105,15 +105,17 @@ The below configurations are done for deployment post build on Canary instances 
 
 ###Monitor the application for Alerts/Failures
 
-A Jenkins Site Monitoring plugin is installed to get the status of application. The plugin checks if the site is up for every 2 seconds.
+Monitoring application can be done using several approaches.
+
+1. A Jenkins Site Monitoring plugin is installed to get the status of application. The plugin checks if the site is up for every 2 seconds.
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0770/3e965e32-e3a8-11e4-803e-2785bb2af38c.png)
 
-The Jenkins job configured also gives the status of a successful build.
+2. The Jenkins job configured also gives the status of a successful build.
 
 ![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0768/63b7a998-e3a6-11e4-9105-cdff6c9bc812.png)
 
-We can also extend our Monitoring workshop to check if the application is breaching memory contraints. To explain this we have deployed same web application on two different servers, when the memory limit exceeds 85% the proxy server will toggle between servers. 
+3. We can also extend our Monitoring workshop to check if the application is breaching memory contraints. To explain this we have deployed same web application on two different servers, when the memory limit exceeds 85% the proxy server will toggle between servers. 
 
 ```
 var io = require('socket.io').listen(server);
