@@ -121,7 +121,7 @@ io.sockets.on('connection', function (socket) {
       });
 
 ```
-
+![alt text] (https://github.ncsu.edu/github-enterprise-assets/0000/2100/0000/0771/0175b87c-e3b7-11e4-9bb5-1e4d8886198c.png)
 
 
 
